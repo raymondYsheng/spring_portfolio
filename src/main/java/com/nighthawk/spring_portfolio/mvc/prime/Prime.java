@@ -1,4 +1,4 @@
-package com.nighthawk.spring_portfolio.mvc.Prime;
+package com.nighthawk.spring_portfolio.mvc.prime;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +16,7 @@ public class Prime {
     private Long id;
 
     @Column(unique=true)
-    private String joke;
+    private String prime;
 
     private int like;
     private int dislike;

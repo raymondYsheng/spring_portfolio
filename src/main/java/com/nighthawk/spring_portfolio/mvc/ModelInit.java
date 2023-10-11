@@ -12,9 +12,8 @@ import com.nighthawk.spring_portfolio.mvc.note.Note;
 import com.nighthawk.spring_portfolio.mvc.note.NoteJpaRepository;
 import com.nighthawk.spring_portfolio.mvc.person.Person;
 import com.nighthawk.spring_portfolio.mvc.person.PersonDetailsService;
-import com.nighthawk.spring_portfolio.mvc.Prime.PrimeJpaRepository;
-import com.nighthawk.spring_portfolio.mvc.Prime.Prime;
-
+import com.nighthawk.spring_portfolio.mvc.prime.Prime;
+import com.nighthawk.spring_portfolio.mvc.prime.PrimeJpaRepository;
 
 import java.util.List;
 
@@ -52,6 +51,7 @@ public class ModelInit {
                     noteRepo.save(n);  // JPA Save                  
                 }
             }
+            
             String[] primeArray = Prime.init();
             for (String prime : primeArray) {
                 List<Prime> primeFind = primeRepo.findByPrimeIgnoreCase(prime);  // JPA lookup
